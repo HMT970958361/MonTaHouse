@@ -328,7 +328,6 @@ export default {
 }
 .select-boxs-options {
   padding: 5px @keyword-width;
-  padding-right: 0px;
   border-top: 2px solid @filter-cutline-color;
   border-bottom: 2px solid @filter-cutline-color;
   .position-list {

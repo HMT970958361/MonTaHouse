@@ -84,7 +84,7 @@
             src="../assets/images/community_title.png"
             alt="二手好房 为你精选"
           />
-          <div>
+          <div  class="com-cards-link">
             <p>纵览小区，恋上这座城</p>
             <a href="">更多重庆小区</a>
           </div>
@@ -116,7 +116,7 @@
       <div class="new-house-cards">
         <div class="new-house-cards-title">
           <img src="../assets/images/newhouse_title.png" alt="新房新启航" />
-          <div>
+          <div class="new-house-cards-link">
             <p>真实楼盘准确同步，楼盘动态一手掌握</p>
             <a href="">更多重庆楼盘</a>
           </div>
@@ -539,6 +539,7 @@ body {
   }
   .base-topnav {
     font-weight: bold;
+    width:540px;
   }
   .base-login {
     margin-left: 10px;
@@ -660,6 +661,7 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    padding-right: 20px;
     p {
       font-size: 18px;
       color: rgb(88, 88, 88);
@@ -689,7 +691,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
@@ -704,10 +706,11 @@ body {
       img {
         height: 60px;
       }
-      div {
+      .com-cards-link {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        padding-right:20px;
         p {
           font-size: 18px;
           color: rgb(50, 50, 50);
@@ -736,7 +739,7 @@ body {
       margin-top: 20px;
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     .community-card {
       background-color: white;
@@ -811,16 +814,17 @@ body {
         color: rgb(88, 88, 88);
       } /* 选定的链接，即鼠标按下去的时候不松开显示的状态 */
     }
-    div {
+    .new-house-cards-link {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
+      padding-right: 20px;
     }
   }
   .new-house-cards-list {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
   }
   .new-house-card {
@@ -879,6 +883,7 @@ body {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
+      padding-right: 20px;
       p {
         font-size: 18px;
         color: rgb(50, 50, 50);
@@ -910,11 +915,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    .house-photo {
-      width: 220px;
-      height: 200px;
-    }
+    justify-content: space-around;
   }
 }
 
@@ -967,7 +968,7 @@ body {
   }
 }
 #foot {
-  padding: 0px 20px;
+  padding: 0px 100px;
   background-color: rgb(31, 31, 31);
 }
 

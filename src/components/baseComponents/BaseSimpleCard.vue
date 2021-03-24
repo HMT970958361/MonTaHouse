@@ -31,17 +31,20 @@ export default {
 </script>
 
 <style lang="less">
+@cardw:200px;
+@cardh:180px;
+
 .base-simple-card {
-  width: 220px;
+  width: @cardw;
 }
 .house-photo {
-  width: 220px;
-  height: 200px;
+  width: @cardw;
+  height: @cardh;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgb(121, 121, 121);
   img {
-    width: 220px;
-    height:200px;
+    width: @cardw;
+    height:@cardh;
     transition: all 1s;
     &:hover {
       transform: scale(1.2);

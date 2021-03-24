@@ -208,7 +208,7 @@ export default {
       else this.showMap = false;
     },
     meteor:function () {
-      
+      //流星动画脚本
     }
   },
 };
@@ -224,9 +224,11 @@ div {
   padding: 0;
 }
 body {
+  user-select: none;
+  background-color: black;
   background-image: url("../assets/images/login_back1.jpg");
-  background-size: 1920px 1080px;
-  background-repeat: repeat;
+  background-size: 1920px 100%;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 #canvas{

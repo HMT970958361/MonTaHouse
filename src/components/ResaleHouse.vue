@@ -198,7 +198,7 @@ div {
     margin: 0px auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 12px;
   }
   .top-login {
@@ -221,7 +221,7 @@ div {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
-      margin-right: 50px;
+      margin-right: 20px;
       .pos-city {
         flex: 0 0 130px;
         width: 130px;
@@ -286,12 +286,12 @@ div {
 }
 #filter {
   background-color: rgb(255, 255, 255);
-  padding: 20px 20px;
+  padding: 20px;
 }
 #showList {
   background-color: rgb(255, 255, 255);
   .show-list {
-    padding: 20px 20px;
+    padding: 20px 50px;
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
@@ -301,7 +301,7 @@ div {
 #footer{
   background-color: rgb(31, 31, 31);
   .footer{
-      padding:0px 20px;
+      padding:0px 100px;
   }
 }
 @media screen and (max-width: @mainWidth) {
@@ -319,9 +319,11 @@ div {
       width:@mainWidth - 50px;
     }
   }
-  #filter .filter {
+  #filter {
+  .filter {
     width: @mainWidth - 50px;
     margin: 0 auto;
+  }
   }
   #showList{
     width: @mainWidth;
