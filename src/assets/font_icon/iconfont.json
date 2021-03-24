@@ -1,0 +1,86 @@
+{
+  "id": "2386912",
+  "name": "MonTaHouse",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "MonTaHouse房产资讯网站图标库",
+  "glyphs": [
+    {
+      "icon_id": "8765226",
+      "name": "关闭",
+      "font_class": "-close2",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "8361771",
+      "name": "关闭",
+      "font_class": "-close",
+      "unicode": "e6bf",
+      "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "7549363",
+      "name": "价格",
+      "font_class": "-price",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "5140727",
+      "name": "地图坐标",
+      "font_class": "-gomap",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "887930",
+      "name": "收藏 (1)",
+      "font_class": "-collected",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "1049976",
+      "name": "收藏",
+      "font_class": "-collect",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "5318214",
+      "name": "房屋房产",
+      "font_class": "-building",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "10939112",
+      "name": "搜索",
+      "font_class": "-search",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "15851377",
+      "name": "地图",
+      "font_class": "-map",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "15851384",
+      "name": "地址/位置",
+      "font_class": "-position",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "1414088",
+      "name": "地址",
+      "font_class": "-address",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    }
+  ]
+}
