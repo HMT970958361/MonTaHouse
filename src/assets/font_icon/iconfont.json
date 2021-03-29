@@ -6,6 +6,13 @@
   "description": "MonTaHouse房产资讯网站图标库",
   "glyphs": [
     {
+      "icon_id": "1420367",
+      "name": "滑动",
+      "font_class": "-slideRight",
+      "unicode": "e83e",
+      "unicode_decimal": 59454
+    },
+    {
       "icon_id": "8765226",
       "name": "关闭",
       "font_class": "-close2",
