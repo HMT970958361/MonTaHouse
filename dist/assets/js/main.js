@@ -3132,7 +3132,7 @@ __webpack_require__.r(__webpack_exports__);
   data() {
     return {
       imgsurl: ["sm", "blxx", "yhxx", "whjy", "962110", "yyzz"],
-      webInfo: ["©2012-2020", "重庆市石柱县筑梦科技有限公司版权所有", "沪公网安备31010402001113号", "沪ICP备19018275号-4", "沪网文〔2019〕3168-216", "增值电信业务经营许可证：沪B2-20190555", "互联网违法不良信息举报电话：021-34203135（工作时间：每天10点-20点）", "互联网违法不良信息举报邮箱：tousu@mihoyo.com"]
+      webInfo: ["©2018-2021", "重庆市石柱县筑梦科技有限公司版权所有", "沪公网安备XXXXXXXXX号", "沪ICP备XXXXXXX号-4", "沪网文〔2020〕XXXX-XXX", "增值电信业务经营许可证：XXX-XXXXXXXXX", "互联网违法不良信息举报电话：021-XXXXXXX（工作时间：每天10点-20点）", "互联网违法不良信息举报邮箱：XXX@XXX.com"]
     };
   }
 
@@ -89501,11 +89501,11 @@ var staticRenderFns = [
     return _c("div", [
       _c("p", [
         _vm._v("\n        互联网违法不良信息举报电话："),
-        _c("a", { attrs: { href: "" } }, [_vm._v("021-34203135")]),
+        _c("a", { attrs: { href: "" } }, [_vm._v("xxx-xxxxxx")]),
         _vm._v(
           "（工作时间：每天10点-20点） |\n        互联网违法不良信息举报邮箱："
         ),
-        _c("a", { attrs: { href: "" } }, [_vm._v("tousu@mihoyo.com")])
+        _c("a", { attrs: { href: "" } }, [_vm._v("XXXX@XXXX.com")])
       ]),
       _vm._v(" "),
       _c("p", [
