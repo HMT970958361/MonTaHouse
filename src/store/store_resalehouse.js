@@ -338,30 +338,35 @@ const store = new Vuex.Store({
       }
       function f_search(data){
         let searchdata=[];
+        let houseString='';
         for(let house of data){
-          let houseString='';
+          houseString='';
           for(let v in house)houseString=houseString.concat(house[v]);
           if(houseString.includes(state.searchcontent))searchdata.push(house);
         }
         return searchdata;
       }
-      if(state.nowPositon.city){//提供点选数据
-        state.houseData=f_cas(state.originData);//筛选区县级数据
-        state.comBoxs=setcomBoxs(state.houseData);//区县级的小区boxs
+      //筛选省级数据
+      if(state.nowPositon.city){
+        state.houseData=[...f_cas(state.originData)];//拷贝省市级数据
+        state.comBoxs=setcomBoxs(state.houseData);//省市级的小区boxs
       }
       else {
         state.houseData=[...state.originData];//拷贝省市级数据
         state.comBoxs=setcomBoxs(state.houseData);//省市级的小区boxs
-      }//省级级的小区boxs
-      if(state.searchcontent && state.nowPositon.area==''){//提供搜索数据,在县级范围查找
+      }
+      //筛选搜索栏数据，在区县级范围查找
+      if(state.searchcontent!='' && state.nowPositon.area==''){
         state.houseData=f_search(state.houseData);
       }
       else {
         state.searchcontent='';
       }
-      if(state.nowPositon.com){//提供选择小区的数据
+      //筛选所选小区的数据
+      if(state.nowPositon.com){
         state.houseData=f_commity(state.houseData);
       }
+      //过滤当前选择的房价、房型等数据。
       if(state.checked)state.houseData=f_checkboxs(state.houseData);
     },
     resetfilter(state) {
@@ -380,8 +385,11 @@ const store = new Vuex.Store({
     },
     newsearch(state,search){
         state.searchcontent=search.content;
+        //在省级搜索
         state.nowPositon.city='';
-        state.nowPositon.area='';//在省级搜索
+        state.nowPositon.area='';
+        state.nowPositon.street='';
+        state.nowPositon.com='';
     },
   },
   actions:{

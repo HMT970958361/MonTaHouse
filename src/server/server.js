@@ -92,11 +92,12 @@ ex.use("/assets", express.static('assets'))
           let unReg=true;
           data=JSON.parse(data);
           for(let user of data){
-            if(regMsg.uemail==user.uemail){
+            if(regMsg.uemail===user.uemail && user.uemail!=''){
             unReg=false;
             res.end(JSON.stringify({successful:false,err:"邮箱已注册"}));break;
           }
-            if(regMsg.uphone==user.uphone){
+            if(regMsg.uphone===user.uphone  && user.uphone!=''){
+              console.log(user)
               unReg=false;
               res.end(JSON.stringify({successful:false,err:"手机号已注册"}));break;
             }
@@ -108,8 +109,8 @@ ex.use("/assets", express.static('assets'))
             user.upw=regMsg.upw;
             user.uname=regMsg.uname;
             user.uphone=regMsg.uphone;
+            user.uphoto='defaultphoto';
             data.push(user);
-            console.log(user)
             fs.writeFile('./assets/json/user_account.json',JSON.stringify(data),err=>{
               if(err)return console.log(err);
               res.end(JSON.stringify({successful:true,userMsg:user}));

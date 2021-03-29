@@ -141,12 +141,14 @@ export default {
         type: "uemail",
         account: "",
         upw: "",
+        uphoto:'defaultphoto'
       },
       regMsg: {
         uname: "",
         upw: "",
         uemail: "",
         uphone: "",
+        uphoto:'defaultphoto'
       },
     };
   },
@@ -164,7 +166,6 @@ export default {
   },
   methods: {
     login: function () {
-      alert(JSON.stringify(this.loginMsg));
       axios
         .post("/login", {
           loginMsg: this.loginMsg,
@@ -194,8 +195,13 @@ export default {
           if (data.successful) {
             this.logined = true;
             this.userMsg = data.userMsg;
+            let loginDate = new Date();
             localStorage.setItem("userMsg", JSON.stringify(this.userMsg)); //储存登录信息
+            localStorage.setItem("loginDate", loginDate.toISOString()); //储存登录时间
             location.assign('http://localhost:8000/index.html')
+          }
+          else {
+            alert(data.err);
           }
         });
     },
@@ -207,9 +213,6 @@ export default {
       }
       else this.showMap = false;
     },
-    meteor:function () {
-      //流星动画脚本
-    }
   },
 };
 </script>

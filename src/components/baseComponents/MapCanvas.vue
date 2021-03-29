@@ -5,16 +5,16 @@
         <span @click="$emit('clooseMap')" >关闭地图</span>
       </li>
     </ul>
-    <div class="map-canvas" ref="mapCanvas"></div>
+    <div class="map-canvas" id="mapCanvas"></div>
   </div>
 </template>
 
 
 <script>
-import echarts from "echarts";
-//import echarts from '../../assets/js/echarts1'
+//import echarts from "../../assets/js/echartsMin.js";
+import echarts from 'echarts'
 import "../../assets/js/map/china";
-
+//import "../../assets/js/map/province/chongqing";
 export default {
   data() {
     return {
@@ -198,8 +198,8 @@ export default {
   },
   methods: {
     initmap: function (pName, Chinese_) {
-      //let map=echarts.init(document.getElementById('mapCanvas'));
-      let map = echarts.init(this.$refs.mapCanvas);
+      let map=echarts.init(document.getElementById('mapCanvas'));
+      //let map = echarts.init(this.$refs.mapCanvas);
       let tmpSeriesData = pName === "china" ? this.seriesData : [];
       let option = {
         title: {
@@ -259,16 +259,6 @@ export default {
         });
       }
     },
-    // showProvince:function (pName, Chinese_) {//切换到省份时加载对应js
-    //   console.log(Chinese_)
-    //   let script=document.createElement('script');
-    //   script.type='text/javascript';
-    //   //script.async = true;
-    //   script.src='../../assets/js/map/province/'+pName+'.js';
-    //   script.id=pName;
-    //   document.getElementsByTagName("body")[0].appendChild(script);
-    //   this.initmap(Chinese_);
-    // }
   },
 };
 </script>

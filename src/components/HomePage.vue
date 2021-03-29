@@ -291,8 +291,7 @@ export default {
               location.href = "http://localhost:8000/resalehouse.html";
             }
             break;
-          default:
-            break;
+          default:break;
         }
     },
     setMap: function () {

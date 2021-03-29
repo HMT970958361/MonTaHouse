@@ -117,14 +117,14 @@ export default {
   },
   mounted() {
 
-    if (localStorage.province) this.$store.commit("setProvince");
-    if (sessionStorage.search) {
-      let search = sessionStorage.search;
-      this.$store.commit("newsearch", search);
-      sessionStorage.removeItem("search");
+    if (localStorage.province)this.$store.commit("setProvince");
+    if (sessionStorage.getItem('search')) {
+        this.$store.commit("newsearch", JSON.parse(sessionStorage.search));
+        this.$store.dispatch("getData");
+        sessionStorage.removeItem("search");
     }
-    this.$store.dispatch("getData");
-    // else this.$store.commit('updateData');//不要放在computed的houseData中，会导致搜索input时，再次执行本句，覆盖搜索内容。
+    else this.$store.dispatch("getData");
+
   },
   watch: {
     nowPositon: function (newp, oldp) {
@@ -173,7 +173,7 @@ export default {
 </script>
 
 <style lang="less">
-@mainWidth: 1024px;
+@mainWidth: 1140px;
 body,
 div {
   margin: 0;

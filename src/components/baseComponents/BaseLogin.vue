@@ -9,7 +9,7 @@
         <div class="user-base">
           <img
             class="user-photo"
-            :src="'../../assets/images/user/u' + userMsg.uid + '.jpg'"
+            :src="'../../assets/images/user/u' + userMsg.uphoto + '.jpg'"
             alt="userphoto"
           />
           <a href="" class="user-name">{{ userMsg.uname }}</a>
@@ -136,18 +136,21 @@ export default {
         type: "uemail",
         account: "",
         upw: "",
+        uphoto:'defaultphoto'
       },
       regMsg: {
         uname: "",
         upw: "",
         uemail: "",
         uphone: "",
+        uphoto:'defaultphoto'
       },
       userMsg: {
         uid: "",
         uemail: "",
         uname: "",
         uphone: "",
+        uphoto:'defaultphoto'
       },
     };
   },
@@ -177,7 +180,7 @@ export default {
       localStorage.removeItem("loginDate"); //删除登录信息
     },
     login: function () {
-      alert(JSON.stringify(this.loginMsg));
+      //alert(JSON.stringify(this.loginMsg));
       axios
         .post("/login", {
           loginMsg: this.loginMsg,
@@ -197,19 +200,24 @@ export default {
         });
     },
     reg: function () {
-      alert(JSON.stringify(this.regMsg));
+      alert('您的注册信息为： \n '+JSON.stringify(this.regMsg)+' \n 请牢记');
       axios
         .post("/reg", {
           regMsg: JSON.stringify(this.regMsg),
         })
         .then((res) => {
           let data = JSON.parse(JSON.stringify(res.data));
+          console.log(data)
           if (data.successful) {
             this.logined = true;
             this.userMsg = data.userMsg;
+            let loginDate = new Date();
             localStorage.setItem("userMsg", JSON.stringify(this.userMsg)); //储存登录信息
             localStorage.setItem("loginDate", loginDate.toISOString()); //储存登录时间
             this.showLogin = false;
+          }
+          else {
+            alert(data.err);
           }
         });
     },
@@ -440,7 +448,7 @@ export default {
       background-color: gray;
       border: 1px solid rgb(153, 214, 255);
       li {
-        padding: 10px 25px;
+        padding: 8px 20px;
         text-align: center;
         font-size: 14px;
         transition: all 0.3s;
