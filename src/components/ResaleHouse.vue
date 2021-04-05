@@ -2,7 +2,7 @@
   <div id="resaleHouse">
     <map-canvas
       id="map"
-      v-show="showMap"
+      v-if="showMap"
       @clooseMap="cMap($event)"
     ></map-canvas>
     <div id="top">
@@ -185,7 +185,7 @@ div {
 #map {
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   position: absolute;
   top: 0;
   left: 0;

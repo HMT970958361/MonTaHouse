@@ -296,8 +296,8 @@ export default {
     }
   }
   #mapCanvas{
-    width: 100%;
-    height:100%;
+    width:inherit;
+    height:inherit;
   }
 }
 </style>
