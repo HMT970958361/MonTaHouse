@@ -5,7 +5,7 @@
         <span @click="$emit('clooseMap')" >关闭地图</span>
       </li>
     </ul>
-    <div class="map-canvas" id="mapCanvas"></div>
+    <div class="map-canvas" id="mapCanvas" style="width;100%;height:100%"></div>
   </div>
 </template>
 
@@ -295,10 +295,9 @@ export default {
       background-color: black;
     }
   }
-  .map-canvas {
-    width: inherit;
-    height: inherit;
-    margin: 0 auto;
+  #mapCanvas{
+    width: 100%;
+    height:100%;
   }
 }
 </style>

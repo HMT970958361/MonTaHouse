@@ -2,7 +2,7 @@
   <div id="homePage">
     <map-canvas
       id="map"
-      v-show="showMap"
+      v-if="showMap"
       @clooseMap="cMap($event)"
     ></map-canvas>
     <div id="header">
@@ -446,6 +446,14 @@ body {
   z-index: 2;
   opacity: 1;
   mix-blend-mode: exclusion; //混合模式
+}
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #header {
   background-color: black;
