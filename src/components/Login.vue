@@ -198,7 +198,7 @@ export default {
       if (p){
         this.showMap = false;
         this.province = this.provinces[p];
-        localStorage.setItem("province", this.province);
+        localStorage.setItem("province", this.province);      
       }
       else this.showMap = false;
     },

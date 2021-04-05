@@ -278,8 +278,8 @@ export default {
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    top: 20px;
-    left: 100px;
+    top: 5%;
+    left: 5%;
   }
   .cloose-map {
     margin:20px;
@@ -296,8 +296,8 @@ export default {
     }
   }
   .map-canvas {
-    width: 1440px;
-    height: 900px;
+    width: inherit;
+    height: inherit;
     margin: 0 auto;
   }
 }
