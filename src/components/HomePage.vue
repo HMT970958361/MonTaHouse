@@ -1,10 +1,8 @@
 <template>
   <div id="homePage">
-    <map-canvas
-      id="map"
-      v-if="showMap"
-      @clooseMap="cMap($event)"
-    ></map-canvas>
+    <!-- 全国省级地图组件 -->
+    <map-canvas id="map" v-if="showMap" @clooseMap="cMap($event)"></map-canvas>
+    <!-- 头部：logo、导航栏、用户 -->
     <div id="header">
       <canvas id="canvas"></canvas>
       <div class="header">
